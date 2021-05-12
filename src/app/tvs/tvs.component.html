@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <h3 class="bg-dark text-light text-center p-3">SAMSUNG TELEVISIONS</h3>
+    <h4>No. of products added to cart :{{recount}}</h4>
+    <h4 class="d-inline">list of products added:</h4>
+    <h4 *ngIf="recount==0" class="d-inline">no products selected</h4>
+    <span *ngFor="let a of received" class="fs-5 h3">{{a}},</span>
+<div class="row row-cols-1  row-cols-md-2 row-cols-lg-3 g-4 mt-5 mb-5">
+<div *ngFor="let item of list " class="col ">
+    <app-product-details [pro]=item (myevent)="receivedproduct($event)" ></app-product-details>
+</div>
+</div>
+</div>
