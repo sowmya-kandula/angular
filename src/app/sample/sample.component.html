@@ -1,0 +1,52 @@
+<div class="container text-center">
+<h1 >DATA</h1>
+<table class="table table-center text-light text-center bg-secondary table-bordered">
+    <thead class="h3 bg-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>Pantone_value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of info.data">
+                <td>{{a.id}}</td>
+                <td>{{a.name}}</td>
+                <td>{{a.year}}</td>
+                <td>{{a.color}}</td>
+                <td>{{a.pantone_value}}</td>
+        </tr>
+    </tbody>
+</table>
+<h1>
+    DATA-2
+</h1>
+<table class="table table-center text-light text-center bg-secondary table-bordered">
+    <thead class="h5 bg-dark">
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Company Name</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let a of data">
+      <td>{{a.id}}</td>
+      <td>{{a.username}}</td>
+      <td>{{a.name}}</td>
+      <td>{{a.email}}</td>
+      <td>{{a.address.city}}</td>
+        <td>{{a.phone}}</td>
+        <td>{{a.website}}</td>
+        <td>{{a.company.name}}</td>
+    </tr>
+</tbody>
+</table>
+</div>

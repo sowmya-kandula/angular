@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from "@angular/common";
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
@@ -10,11 +12,12 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
-
 import { TvsComponent } from './tvs/tvs.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { CamerasComponent } from './cameras/cameras.component';
-
+import { PagenotComponent } from './pagenot/pagenot.component';
+import { SampleComponent } from './sample/sample.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,20 @@ import { CamerasComponent } from './cameras/cameras.component';
     HomeComponent,
     TvsComponent,
     MobilesComponent,
-    CamerasComponent
+    CamerasComponent,
+    PagenotComponent,
+    SampleComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

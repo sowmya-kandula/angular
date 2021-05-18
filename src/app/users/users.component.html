@@ -1,0 +1,16 @@
+<div class="container">
+    <table class="table bg-light text-center table-bordered m-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of userslist">
+                <td><button class="btn btn-dark btn-sm" (click)="onselectid(a.id)">{{a.id}}</button></td>
+                <td>{{a.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
