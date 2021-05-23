@@ -1,0 +1,36 @@
+<form  (ngSubmit)="onsave(ref.value)" #ref="ngForm">
+<table class="table table-center container table-bordered-dark mt-4 ">
+    <thead class="h3  text-center">
+        <tr>
+            <th>Brand</th>
+            <th>description</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody >
+        
+        <tr *ngFor="let a of list;let ind=index">
+            <td>
+                <span *ngIf="!status || mobind!==ind">{{a.usertitle}}</span>
+               <span *ngIf="status && mobind==ind"> <input type="text" name="usertitle" class="form-control" id="" [(ngModel)]=newmobile.usertitle></span>
+            </td>
+            <td>
+                <span *ngIf="!status || mobind!==ind">{{a.about}}</span>
+                <input type="text" name="about" id="" *ngIf="status && mobind==ind" class="form-control"  [(ngModel)]=newmobile.about>
+            </td>
+            <td><img src="{{a.image}}" alt="" height="100px"></td>
+            <td><span class="p-2" *ngIf="!status || mobind!==ind">
+            <button class="btn btn-sm btn-warning " (click)=onedit(a,ind) ><i class="fas fa-edit"></i></button>
+            <button class="btn btn-sm btn-danger "(click)=ondelete(a) ><i class="fas fa-trash-alt"></i></button>
+            </span>
+            <span *ngIf="status && mobind==ind">
+                <button class="btn btn-sm btn-success" type="submit" ><i class="fas fa-save text-white"></i></button>
+            </span>
+        </td>
+        </tr>
+    
+    </tbody>
+</table>
+</form>

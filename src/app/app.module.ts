@@ -18,6 +18,9 @@ import { CamerasComponent } from './cameras/cameras.component';
 import { PagenotComponent } from './pagenot/pagenot.component';
 import { SampleComponent } from './sample/sample.component';
 import { UsersComponent } from './users/users.component';
+import { ViewmobilesComponent } from './viewmobiles/viewmobiles.component';
+import { AddnewmobileComponent } from './addnewmobile/addnewmobile.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { UsersComponent } from './users/users.component';
     CamerasComponent,
     PagenotComponent,
     SampleComponent,
-    UsersComponent
+    UsersComponent,
+    ViewmobilesComponent,
+    AddnewmobileComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

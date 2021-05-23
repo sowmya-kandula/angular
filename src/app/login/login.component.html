@@ -3,19 +3,19 @@
 <div class="row">
     <div class="col-sm-2 col-md-3"></div>
     <div class="col-sm-8 col-md-6">
-        <form class="text-dark fs-4">
+        <form class="text-dark fs-4" (ngSubmit)=onsubmit() >
             <div class="mb-3">
                 <label for="un" class="form-label">Username</label>
-                <input type="text" class="form-control" id="un" name="username" >
+                <input type="text" class="form-control" id="un" name="username" [(ngModel)]=user >
             </div>
             <div class="mb-3">
                 <label for="pw" class="form-label">Password</label>
-                <input type="password" class="form-control" id="pw"  name="password">
+                <input type="password" class="form-control" id="pw"  name="password" [(ngModel)]=pass>
             </div>
         
            
         
-            <button class="btn btn-info btn-lg d-block mx-auto m-4">Login</button>
+            <button class="btn btn-info btn-lg d-block mx-auto m-4" type="submit">Login</button>
         </form>
     </div>
     <div class="col-sm-2 col-md-3"></div>

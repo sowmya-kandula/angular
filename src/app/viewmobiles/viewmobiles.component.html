@@ -1,0 +1,11 @@
+
+<div class="container mt-5">
+    <h3 class="bg-dark text-light text-center p-3">SAMSUNG MOBILES</h3>
+    
+    <input type="text" class="form-control" placeholder="search by username....."   [(ngModel)]="searchterm">
+<div class="row row-cols-1  row-cols-md-3 row-cols-lg-4 g-4 mt-5 mb-5">
+<div *ngFor="let item of list|search:searchterm " class="col ">
+    <app-product-details [pro]=item  ></app-product-details>
+</div>
+</div>
+</div>

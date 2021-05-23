@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,6 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  constructor(public obj:DataService){}
+
 }
